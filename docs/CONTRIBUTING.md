@@ -8,9 +8,10 @@
 
 ### 2. Kush Srigiri (Frontend Developer)
 **Contribution:** Improved UI components for accessibility and responsiveness.   
-- Improved mobile responsiveness with better padding and font sizes.  
-- Refactored CSS for better maintainability. 
+- Improved layout with better padding and font sizes for a good UI/UX flow.  
+- Refactored Styles for better maintainability. 
 
 ### 3. Alessio Huber (Mockup Ceator)  
 **Contribution:** Created an ER-Diagramm for better visibility
+- Improved planning for better Time Managemente and Visualization
  
