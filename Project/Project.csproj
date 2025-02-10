@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <ApplicationIcon>assets\airplay.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="loader-circle-dark.png" />
+    <None Remove="loader-circle.png" />
+    <None Remove="log-out.png" />
+    <None Remove="minus.png" />
+    <None Remove="x.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="assets\airplay.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="loader-circle-dark.png" />
+    <Resource Include="loader-circle.png" />
+    <Resource Include="log-out.png" />
+    <Resource Include="minus.png" />
+    <Resource Include="x.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CredentialManagement" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+  </ItemGroup>
+
+</Project>
