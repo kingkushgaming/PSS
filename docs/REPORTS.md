@@ -4,7 +4,17 @@
 
 - Deleted and restored the whole Repository
 - Added new Files and Codes
-- Improved Plan managemenet 
+- Improved Plan managemenet
+
+
+### 17.02.2025:  
+[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+#### Description:
+
+- Discussed Process
+- Started with the ER-Diagramm
+- Mockup Drawings of the ER-Diagramm
+- Sketch of the SQL Project visualisation
 
 
 ### 24.02.2025:  
