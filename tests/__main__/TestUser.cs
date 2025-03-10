@@ -4,11 +4,12 @@ using System;
 namespace __main__
 {
   [TestClass]
-  public class UnitTest1
+  public class TestUser
   {
     [TestMethod]
-    public void TestMethod1()
+    public void Login()
     {
+      
     }
   }
 }

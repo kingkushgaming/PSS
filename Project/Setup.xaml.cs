@@ -3,6 +3,7 @@ using Project.services;
 using System.Diagnostics;
 using System.DirectoryServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Project;
 
@@ -62,5 +63,10 @@ public partial class Setup : Window
 
         this.DialogResult = true;
         this.Close();
+    }
+
+    private void Close_Click(object sender, MouseButtonEventArgs e)
+    {
+        Application.Current.Shutdown();   
     }
 }

@@ -24,7 +24,7 @@
                         Height="12"
                         Cursor="Hand"
                         MouseLeftButtonDown="Close_Click">
-          <Image Source="/x.png" Margin="1" Visibility="Hidden" x:Name="IconX" />
+          <Image Source="/x.png" Margin="2" Visibility="Hidden" x:Name="IconX" />
         </Border>
 
         <!-- Spacer -->
@@ -38,7 +38,7 @@
                         Height="12"
                         Cursor="Hand"
                         MouseLeftButtonDown="Minimize_Click">
-          <Image Source="/minus.png" Margin="1" Visibility="Hidden" x:Name="IconMinus" />
+          <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
         </Border>
 
       </StackPanel>

@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project.services
 {
-    public class DB : IDisposable
+    public sealed class DB : IDisposable
     {
+        private static readonly Lazy<DB> instance = new Lazy<DB>(() => new DB());
         private readonly string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data");
         private readonly string fullpath;
         private readonly string connectionString;
         private readonly SQLiteConnection conn;
 
-        public DB()
+        private DB()
         {
             fullpath = Path.Combine(dbPath, "database.db");
             connectionString = $"Data Source={fullpath};Version=3;";
@@ -33,6 +29,8 @@ namespace Project.services
             conn = new SQLiteConnection(connectionString);
             conn.Open();
         }
+
+        public static DB Instance => instance.Value;
 
         public void Execute(string query, params string[] parameters)
         {
@@ -52,7 +50,6 @@ namespace Project.services
             }
         }
 
-
         public bool TableExists(string tableName)
         {
             if (conn.State != System.Data.ConnectionState.Open)
@@ -69,7 +66,6 @@ namespace Project.services
                 return count > 0;
             }
         }
-
 
         public string[] Get(string query, params string[] parameters)
         {
@@ -94,18 +90,16 @@ namespace Project.services
 
                         for (int i = 0; i < columnCount; i++)
                         {
-                            result[i] = reader[i]?.ToString() ?? string.Empty; 
+                            result[i] = reader[i]?.ToString() ?? string.Empty;
                         }
 
-                        return result; 
+                        return result;
                     }
                 }
             }
 
-            return new string[0]; 
+            return new string[0];
         }
-
-
 
         public void Dispose()
         {
@@ -115,7 +109,5 @@ namespace Project.services
                 conn.Dispose();
             }
         }
-
     }
 }
-

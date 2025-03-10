@@ -16,7 +16,7 @@ namespace Project
             InitializeComponent();
 
 
-            DB db = new DB();
+            DB db = DB.Instance;
 
             if (db.TableExists("User"))
             {

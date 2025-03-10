@@ -21,8 +21,9 @@
                             CornerRadius="1000"
                             Width="12"
                             Height="12"
-                            Cursor="Hand">
-            <Image Source="/x.png" Margin="1" Visibility="Hidden" Name="IconX" />
+                            Cursor="Hand"
+                            MouseLeftButtonDown="Close_Click">
+            <Image Source="/x.png" Margin="2" Visibility="Hidden" Name="IconX" />
           </Border>
 
           <!-- Spacer -->

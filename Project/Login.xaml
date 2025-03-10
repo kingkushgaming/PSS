@@ -21,7 +21,7 @@
                     Height="12" 
                     Cursor="Hand" 
                     MouseLeftButtonDown="Close_Click" >
-          <Image Source="/x.png" Margin="1" Visibility="Hidden" Name="IconX" />
+          <Image Source="/x.png" Margin="2" Visibility="Hidden" Name="IconX" />
         </Border>
 
         <!-- Spacer -->
